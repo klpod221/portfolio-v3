@@ -1,8 +1,8 @@
 // load scss
-import "../styles/main.scss";
+import "/src/styles/main.scss";
 
 // load js
-import "./init";
+import "/src/scripts/init";
 
 import $ from "jquery";
 

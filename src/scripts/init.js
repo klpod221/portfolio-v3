@@ -20,6 +20,12 @@ $(() => {
   projects();
   portfolio();
   dateCounter();
+
+  // check hash on load
+  const hash = window.location.hash;
+  if (hash) {
+    $('.menu .transition-link a[href="' + hash + '"]').trigger("click");
+  }
 });
 
 function dateCounter() {
@@ -97,11 +103,9 @@ function modalNews() {
     modalBox.addClass("opened");
     modalBox.find(".description-wrap").html(content);
     modalBox
-      .find(".news-popup-information")
-      .prepend('<div class="image"><img src="/images/1.jpg" alt="" /></div>');
-    modalBox
       .find(".news-popup-information .image")
       .append('<span class="date">' + date + "</span>");
+      
     modalBox
       .find(".news-popup-information .image")
       .after(
@@ -325,6 +329,8 @@ function pageTransition() {
     const element = $(this);
     const href = element.attr("href");
 
+    window.history.pushState("", "", href);
+
     if (element.parent().hasClass("button")) {
       $('.menu .transition-link a[href="' + href + '"]').trigger("click");
       return false;
@@ -368,6 +374,7 @@ function projects() {
   $(".portfolio-animation-wrap").each(function () {
     $(this)
       .on("mouseenter", function () {
+        console.log("hover");
         if ($(this).data("title")) {
           $(".portfolio-titles").html(
             $(this).data("title") +

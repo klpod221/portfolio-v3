@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-v3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "jquery": "^3.7.1",
+    "sass": "^1.77.3",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "hamburgers": "^1.2.1",
+    "isotope-layout": "^3.0.6",
+    "jquery-bridget": "^3.0.1",
+    "magnific-popup": "^1.1.0",
+    "waypoints": "^4.0.1"
+  }
+}

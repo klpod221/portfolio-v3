@@ -1,0 +1,123 @@
+.sidebar-menu {
+  position: fixed;
+  top: 100px;
+  left: 250px;
+  bottom: 100px;
+  width: 400px;
+  background-color: #fff;
+  .sidebar-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 50px;
+    img {
+      max-width: 200px;
+      max-height: 100px;
+    }
+    .text {
+      h3 {
+        font-size: 40px;
+        font-family: archivo black;
+      }
+    }
+  }
+  .logo[data-type="avatar"] {
+    .avatar {
+      display: inline-block;
+    }
+    .image {
+      display: none;
+    }
+    .text {
+      display: none;
+    }
+  }
+  .logo[data-type="image"] {
+    .avatar {
+      display: none;
+    }
+    .image {
+      display: inline-block;
+    }
+    .text {
+      display: none;
+    }
+  }
+  .logo[data-type="text"] {
+    .avatar {
+      display: none;
+    }
+    .image {
+      display: none;
+    }
+    .text {
+      display: inline-block;
+    }
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .menu {
+    margin-bottom: 50px;
+    ul {
+      li {
+        a {
+          color: #868a9b;
+          padding: 2px 0;
+          display: inline-block;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+      }
+
+      li a:hover,
+      li.active a {
+        color: #000;
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    margin-bottom: 20px;
+    a {
+      color: #000;
+    }
+  }
+  .social {
+    width: 100%;
+    li {
+      display: inline-block;
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        color: #868a9b;
+        font-size: 19px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
